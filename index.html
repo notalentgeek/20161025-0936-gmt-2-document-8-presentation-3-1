@@ -1,0 +1,259 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <title>reveal.js</title>
+
+        <link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/theme/black.css">
+
+        <!-- Theme used for syntax highlighting of code -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section data-markdown>
+                    <script type="text-template">
+                        ### Previous presentations.
+                        * Presentation 1, [https://notalentgeek.github.io/20161024-2241-gmt-2-document-5-presentation-1-1/#/](https://notalentgeek.github.io/20161024-2241-gmt-2-document-5-presentation-1-1/#/).
+                        * Presentation 2, [https://notalentgeek.github.io/20161024-2241-gmt-2-document-6-presentation-2-1/#/](https://notalentgeek.github.io/20161024-2241-gmt-2-document-6-presentation-2-1/#/).
+                    </script>
+                </section>
+                <section data-markdown>
+                    <script type="text-template">
+                        ### Wiki.
+                        * [https://github.com/notalentgeek/wiki-notalentgeek/tree/master/project/project-commitment/pc-ut-bachelor-thesis-2016](https://github.com/notalentgeek/wiki-notalentgeek/tree/master/project/project-commitment/pc-ut-bachelor-thesis-2016). Look for file with .md extension.
+                    </script>
+                </section>
+                <section>
+                    <section data-markdown>
+                        <script type="text-template">
+                            ### There are 6 main things in the sociometric badge (1/2).
+                            * 3 - axis angle sensor (probably linear hall effect sensor) to detect body language.
+                            * Bluetooth module to send data to the main processing computer also to detect if there are other sociometric badge in range.
+                            * Infrared module to detect if the wearer is currently doing face to face communication.
+                        </script>
+                    </section>
+                    <section data-markdown>
+                        <script type="text-template">
+                            ![./asset/axis.png](./asset/axis.png)
+                        </script>
+                    </section>
+                    <section data-markdown>
+                        <script type="text-template">
+                            ![./asset/bluetooth.png](./asset/bluetooth.png)
+                        </script>
+                    </section>
+                    <section data-markdown>
+                        <script type="text-template">
+                            ![./asset/ir.png](./asset/ir.png).
+                        </script>
+                    </section>
+                    <section data-markdown>
+                        <script type="text-template">
+                            ### There are 6 main things in the sociometric badge (2/2).
+                            * Microphones to detect whether there is a sound or not.
+                            * RF to detect in which room the wearer are in at a given time.
+                            * WiFi module to send real time data to the server.
+                        </script>
+                    </section>
+                    <section data-markdown>
+                        <script type="text-template">
+                            ![./asset/.png](./asset/electret.png)
+                        </script>
+                    </section>
+                    <section data-markdown>
+                        <script type="text-template">
+                            ![./asset/.png](./asset/rf.png)
+                        </script>
+                    </section>
+                    <section data-markdown>
+                        <script type="text-template">
+                            ![./asset/.png](./asset/wifi.png)
+                        </script>
+                    </section>
+                </section>
+                <section data-markdown>
+                    <script type="text-template">
+                        ### So there are at least 4 sensory modules that need to be programmed on.
+                        * Angle sensor.
+                        * Infrared.
+                        * Bluetooth.
+                        * RF.
+                    </script>
+                </section>
+                <section data-markdown>
+                    <script type="text-template">
+                        ### If these 4 modules are done, it is basically a stand - alone sociometric badge without the networking part.
+                    </script>
+                </section>
+                <section data-markdown>
+                    <script type="text-template">
+                        ### Unsocial badge.
+                    </script>
+                </section>
+                <section data-markdown>
+                    <script type="text-template">
+                        ![./asset/monkey.gif](./asset/monkey.gif)
+                    </script>
+                </section>
+                <section data-markdown>
+                    <script type="text-template">
+                        ### Unsocial badge + network = sociometric badge.
+                    </script>
+                </section>
+                <section data-markdown>
+                    <script type="text-template">
+                        ![./asset/network.png](./asset/network.png)
+                    </script>
+                </section>
+                <section data-markdown>
+                    <script type="text-template">
+                        ### Two ways network.
+                        * Badge sent raw data (voice interval, face to face conversations, and location).
+                        * Server sent time stamp gradually to sync all across badges.
+                    </script>
+                </section>
+                <section data-markdown>
+                    <script type="text-template">
+                        ### In a server badges informations will be aggregated.
+                    </script>
+                </section>
+                <section data-markdown>
+                    <script type="text-template">
+                        ### So, here is what I propose for the badge.
+                        * __*Angle sensor.*__
+                        * Infrared for detecting whether face to face conversation happens.
+                        * Microcontroller (Arduino/Raspberry PI Zero).
+                        * Microphone.
+                        * RF for detecting people nearby.
+                        * Server.
+                        * WiFi module to connect and send data to server.
+                    </script>
+                </section>
+                <section data-markdown>
+                    <script type="text-template">
+                        ### To sum up there will be 3 main parts on this project.
+                        * Cosmetics (3D printed case, ...). This will be least on priority.
+                        * Server part.
+                        * Sociometric badge part.
+                    </script>
+                </section>
+                <section data-markdown>
+                    <script type="text-template">
+                        ### Possible obstacles.
+                        * How to get the angle sensor value to determine the body language.
+
+                        ![./asset/body.png](./asset/body.png)
+                    </script>
+                </section>
+                <section data-markdown>
+                    <script type="text-template">
+                        ### What are the options for the controller?
+                        * Arduino 328P or Bareduino Nano.
+                        * Arduino Mega.
+                        * Raspberry PI Zero.
+                    </script>
+                </section>
+                <section data-markdown>
+                    <script type="text-template">
+                        ![./asset/bdn.png](./asset/bdn.png)
+                    </script>
+                </section>
+                <section data-markdown>
+                    <script type="text-template">
+                        ### Arduino 328P or Bareduino Nano pros and cons.
+                        * Pros.
+                            * A lot of libraries.
+                            * Cheap and it is sold everywhere.
+                            * Easy to code.
+                            * Small form factor.
+                        * Cons.
+                            * It has minimal memory to store codes (32 kilo bytes only!!!).
+                    </script>
+                </section>
+                <section data-markdown>
+                    <script type="text-template">
+                        ![./asset/amega.png](./asset/amega.png)
+                    </script>
+                </section>
+                <section data-markdown>
+                    <script type="text-template">
+                        ### Arduino Mega pros and cons.
+                        * Pros.
+                            * 6 times bigger memory to store codes than Arduino 328P (256 kilo bytes).
+                            * A lot of libraries.
+                            * Easy to code.
+                            * Many GPIO pins both analogs, digitals, and PWMs. This means a lot of sensors can be added.
+                        * Cons.
+                            * Bigger form factor.
+                    </script>
+                </section>
+                <section data-markdown>
+                    ![./asset/r0.png](./asset/r0.png)
+                </section>
+                <section data-markdown>
+                    <script type="text-template">
+                        ### Raspberry PI Zero.
+                        * Pros.
+                            * Can be charged with phone adapter or power juice (10000 mAh).
+                            * It is basically a basic computer.
+                            * Many GPIO (fewer than Arduino Mega).
+                            * Support micro SD card.
+                        * Cons.
+                            * Hard to get. The price is around 21 Euros in retailer although officially it is 9 Euros computer.
+                            * Have no WiFi or Bluetooth. Need to have as a dongle.
+                            * Only 1 USB port.
+                    </script>
+                </section>
+                <section data-markdown>
+                    <script type="text-template">
+                        ![./asset/wifidong.png](./asset/wifidong.png)
+                    </script>
+                </section>
+                <section data-markdown>
+                    <script type="text-template">
+                        ### Current workaround.
+                        * Try to get Raspberry PI Zero until middle of November.
+                        * While working on Arduino Mega.
+                        * If at the end these happens.
+                            * If I get Raspberry PI Zero continue working on Raspberry PI Zero.
+                            * If I do not get Raspberry PI Zero.
+                                * If the codes take less than 32 kilo bytes use Bareduino Nano.
+                                * If the codes take more than 32 kilo bytes use Arduino Mega.
+                    </script>
+                </section>
+            </div>
+        </div>
+
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.js"></script>
+
+        <script>
+            // More info https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                history: true,
+
+                // More info https://github.com/hakimel/reveal.js#dependencies
+                dependencies: [
+                    { src: 'plugin/markdown/marked.js' },
+                    { src: 'plugin/markdown/markdown.js' },
+                    { src: 'plugin/notes/notes.js', async: true },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+                ]
+            });
+        </script>
+    </body>
+</html>
